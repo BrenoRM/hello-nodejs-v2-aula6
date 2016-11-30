@@ -12,5 +12,11 @@ app.post("/dosave", (req,res) => {
   res.send("<h1>Sucesso!</h1><a href='index.html'>voltar</a>");
 });
 
+app.post("/adivinha", (req,res) => {
+  console.log("O número recebido foi:");
+  console.log(req.body);
+  res.send("<h1>Será que acertou?</h1><a href='numero.html'>voltar</a>");
+});
+
 app.listen(3000);
 console.log("app online");
