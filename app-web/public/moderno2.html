@@ -1,0 +1,20 @@
+<!-- moderno2.html -->
+<html>
+    <head>
+    <title>App web moderno</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+    <h1>App web moderno 2.0</h1>
+    <button id="solicita" onclick="dosol()">Solicitar convidados</button>
+    <div id="ret"></div>
+    <script>
+        function dosol(){
+        var ret = document.getElementById("ret");
+        axios.get("convidados").then((res) => {
+            res.data.map( (e) => ret.innerHTML += `<p>${e.nomeconvidado}</p>`);
+        });
+        }
+    </script>
+    </body>
+</html>
